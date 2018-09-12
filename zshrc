@@ -37,6 +37,9 @@ _load_settings() {
     fi
   fi
 }
+
+{ eval `ssh-agent`; ssh-add -A; } &>/dev/null
+
 _load_settings "$HOME/.zsh/configs"
 
 # aliases
@@ -44,3 +47,6 @@ _load_settings "$HOME/.zsh/configs"
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# added by travis gem
+[ -f /Users/ej/.travis/travis.sh ] && source /Users/ej/.travis/travis.sh

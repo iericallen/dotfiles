@@ -14,7 +14,6 @@
   st = status
 [core]
   excludesfile = ~/.gitignore
-  autocrlf = input
 [merge]
   ff = only
 [commit]
@@ -25,3 +24,8 @@
   autosquash = true
 [include]
   path = ~/.gitconfig.local
+[user]
+	name = Eric Allen
+	email = eric.justin.allen@gmail.com
+[credential]
+	helper = osxkeychain
